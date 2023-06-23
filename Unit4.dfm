@@ -1,9 +1,9 @@
-object Form2: TForm2
-  Left = 305
-  Top = 132
-  Width = 1018
-  Height = 562
-  Caption = 'Form2'
+object Form4: TForm4
+  Left = 154
+  Top = 160
+  Width = 1017
+  Height = 541
+  Caption = 'Form4'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,11 +14,11 @@ object Form2: TForm2
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
-    Left = 416
+    Left = 368
     Top = 8
-    Width = 155
+    Width = 255
     Height = 23
-    Caption = 'DATA WALI KELAS'
+    Caption = 'DATA ORANG TUA ATAU WALI'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -19
@@ -27,7 +27,7 @@ object Form2: TForm2
     ParentFont = False
   end
   object pnl1: TPanel
-    Left = 31
+    Left = 39
     Top = 40
     Width = 913
     Height = 273
@@ -87,9 +87,9 @@ object Form2: TForm2
     object lbl9: TLabel
       Left = 536
       Top = 24
-      Width = 41
+      Width = 79
       Height = 19
-      Caption = 'Mapel'
+      Caption = 'No. Telpon'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -16
@@ -100,9 +100,9 @@ object Form2: TForm2
     object lbl10: TLabel
       Left = 536
       Top = 56
-      Width = 94
+      Width = 50
       Height = 19
-      Caption = 'Tingkat Kelas'
+      Caption = 'Alamat'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -16
@@ -113,9 +113,22 @@ object Form2: TForm2
     object lbl11: TLabel
       Left = 536
       Top = 88
-      Width = 54
+      Width = 69
       Height = 19
-      Caption = 'Jabatan'
+      Caption = 'Pekerjaan'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -16
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object lbl6: TLabel
+      Left = 536
+      Top = 120
+      Width = 43
+      Height = 19
+      Caption = 'Status'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -16
@@ -212,7 +225,6 @@ object Form2: TForm2
       Width = 193
       Height = 21
       TabOrder = 11
-      Text = 'Edit6'
     end
     object Edit7: TEdit
       Left = 656
@@ -220,12 +232,18 @@ object Form2: TForm2
       Width = 193
       Height = 21
       TabOrder = 12
-      Text = 'Edit7'
+    end
+    object Edit8: TEdit
+      Left = 656
+      Top = 120
+      Width = 193
+      Height = 21
+      TabOrder = 13
     end
   end
   object dbgrd1: TDBGrid
-    Left = 31
-    Top = 336
+    Left = 39
+    Top = 328
     Width = 913
     Height = 145
     TabOrder = 1
