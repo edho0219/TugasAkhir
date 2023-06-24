@@ -1,7 +1,7 @@
 object Form4: TForm4
-  Left = 127
-  Top = 136
-  Width = 1017
+  Left = 267
+  Top = 155
+  Width = 1039
   Height = 541
   Caption = 'Form4'
   Color = clBtnFace
@@ -246,11 +246,40 @@ object Form4: TForm4
     Top = 328
     Width = 913
     Height = 145
+    DataSource = ds1
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+  end
+  object con1: TZConnection
+    ControlsCodePage = cGET_ACP
+    UTF8StringsAsWideField = False
+    AutoEncodeStrings = False
+    Connected = True
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'laporansiswa'
+    User = 'root'
+    Protocol = 'mysql'
+    LibraryLocation = 'C:\Users\USER\Documents\Visual2\TugasAkhir\libmysql.dll'
+    Left = 976
+    Top = 88
+  end
+  object zqry1: TZQuery
+    Connection = con1
+    Active = True
+    SQL.Strings = (
+      'select * from tabel_ortuatauwali')
+    Params = <>
+    Left = 976
+    Top = 152
+  end
+  object ds1: TDataSource
+    DataSet = zqry1
+    Left = 976
+    Top = 224
   end
 end
