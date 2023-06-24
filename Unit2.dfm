@@ -1,7 +1,7 @@
 object Form2: TForm2
   Left = 166
   Top = 141
-  Width = 1018
+  Width = 1076
   Height = 562
   Caption = 'Form2'
   Color = clBtnFace
@@ -234,5 +234,22 @@ object Form2: TForm2
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+  end
+  object con1: TZConnection
+    ControlsCodePage = cGET_ACP
+    UTF8StringsAsWideField = False
+    AutoEncodeStrings = False
+    Port = 0
+    Left = 984
+    Top = 96
+  end
+  object zqry1: TZQuery
+    Params = <>
+    Left = 984
+    Top = 160
+  end
+  object ds1: TDataSource
+    Left = 984
+    Top = 232
   end
 end
