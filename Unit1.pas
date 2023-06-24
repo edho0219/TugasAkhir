@@ -45,9 +45,9 @@ type
     Edit11: TEdit;
     Edit12: TEdit;
     dbgrd1: TDBGrid;
-    con1: TZConnection;
     zqry1: TZQuery;
     ds1: TDataSource;
+    con1: TZConnection;
   private
     { Private declarations }
   public

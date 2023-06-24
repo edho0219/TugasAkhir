@@ -348,12 +348,29 @@ object Form1: TForm1
     Top = 392
     Width = 913
     Height = 145
+    DataSource = ds1
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+  end
+  object zqry1: TZQuery
+    Connection = con1
+    Active = True
+    SQL.Strings = (
+      'select * from tabel_siswa')
+    Params = <>
+    Properties.Strings = (
+      'select * from tabel_siswa')
+    Left = 976
+    Top = 168
+  end
+  object ds1: TDataSource
+    DataSet = zqry1
+    Left = 976
+    Top = 232
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -363,19 +380,10 @@ object Form1: TForm1
     HostName = 'localhost'
     Port = 3306
     Database = 'laporansiswa'
-    User = 'root'#13#10
+    User = 'root'
     Protocol = 'mysql'
     LibraryLocation = 'C:\Users\USER\Documents\Visual2\TugasAkhir\libmysql.dll'
     Left = 976
     Top = 112
-  end
-  object zqry1: TZQuery
-    Params = <>
-    Left = 976
-    Top = 168
-  end
-  object ds1: TDataSource
-    Left = 976
-    Top = 232
   end
 end
