@@ -1,6 +1,6 @@
 object Form2: TForm2
-  Left = 166
-  Top = 141
+  Left = 240
+  Top = 131
   Width = 1076
   Height = 562
   Caption = 'Form2'
@@ -228,6 +228,7 @@ object Form2: TForm2
     Top = 336
     Width = 913
     Height = 145
+    DataSource = ds1
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -239,16 +240,30 @@ object Form2: TForm2
     ControlsCodePage = cGET_ACP
     UTF8StringsAsWideField = False
     AutoEncodeStrings = False
-    Port = 0
+    Properties.Strings = (
+      'select * from tabel_walikelas'
+      'controls_cp=GET_ACP')
+    Connected = True
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'laporansiswa'
+    User = 'root'
+    Protocol = 'mysql'
+    LibraryLocation = 'C:\Users\USER\Documents\Visual2\TugasAkhir\libmysql.dll'
     Left = 984
     Top = 96
   end
   object zqry1: TZQuery
+    Connection = con1
+    Active = True
+    SQL.Strings = (
+      'select * from tabel_walikelas')
     Params = <>
     Left = 984
     Top = 160
   end
   object ds1: TDataSource
+    DataSet = zqry1
     Left = 984
     Top = 232
   end
