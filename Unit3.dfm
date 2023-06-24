@@ -1,6 +1,6 @@
 object Form3: TForm3
-  Left = 224
-  Top = 139
+  Left = 309
+  Top = 136
   Width = 772
   Height = 580
   Caption = 'Form3'
@@ -146,11 +146,40 @@ object Form3: TForm3
     Top = 360
     Width = 666
     Height = 145
+    DataSource = ds1
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+  end
+  object ds1: TDataSource
+    DataSet = zqry1
+    Left = 712
+    Top = 232
+  end
+  object con1: TZConnection
+    ControlsCodePage = cGET_ACP
+    UTF8StringsAsWideField = False
+    AutoEncodeStrings = False
+    Connected = True
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'laporansiswa'
+    User = 'root'
+    Protocol = 'mysql'
+    LibraryLocation = 'C:\Users\USER\Documents\Visual2\TugasAkhir\libmysql.dll'
+    Left = 712
+    Top = 104
+  end
+  object zqry1: TZQuery
+    Connection = con1
+    Active = True
+    SQL.Strings = (
+      'select * from tabel_poin')
+    Params = <>
+    Left = 712
+    Top = 168
   end
 end
