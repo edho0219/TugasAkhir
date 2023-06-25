@@ -37,17 +37,18 @@ type
     btn5: TButton;
     btn6: TButton;
     dtp1: TDateTimePicker;
-    Edit6: TEdit;
-    Edit7: TEdit;
-    Edit8: TEdit;
-    Edit9: TEdit;
-    Edit10: TEdit;
-    Edit11: TEdit;
-    Edit12: TEdit;
     dbgrd1: TDBGrid;
     zqry1: TZQuery;
     ds1: TDataSource;
     con1: TZConnection;
+    cbb1: TComboBox;
+    cbb2: TComboBox;
+    cbb3: TComboBox;
+    Edit6: TEdit;
+    Edit7: TEdit;
+    Edit8: TEdit;
+    Edit9: TEdit;
+    procedure btn2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -61,5 +62,14 @@ implementation
 
 {$R *.dfm}
 
+procedure TForm1.btn2Click(Sender: TObject);
+begin
+zqry1.SQL.Clear;
+zqry1.SQL.Add('insert into tabel_siswa values(null,"'+edit1.Text+'","'+edit2.Text+'","'+edit3.Text+'","'+edit4.Text+'","'+edit5.Text+'","'+dtp1.Format+'","'+cbb1.Text+'","'+cbb2.Text+'","'+cbb3.Text+'","'+edit6.Text+'","'+edit7.Text+'","'+edit8.Text+'","'+edit9.Text+'")');
+zqry1.ExecSQL ;
+zqry1.SQL.Clear;
+zqry1.SQL.Add('select * from tabel_siswa');
+zqry1.Open;
+end;
+
 end.
- 

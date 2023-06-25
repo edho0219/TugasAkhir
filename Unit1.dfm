@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 193
-  Top = 117
+  Left = 201
+  Top = 133
   Width = 1086
   Height = 587
   Caption = 'Form1'
@@ -251,6 +251,7 @@ object Form1: TForm1
       Height = 41
       Caption = 'SIMPAN'
       TabOrder = 6
+      OnClick = btn2Click
     end
     object btn3: TButton
       Left = 360
@@ -293,49 +294,74 @@ object Form1: TForm1
       Time = 45100.336346655090000000
       TabOrder = 11
     end
-    object Edit6: TEdit
+    object cbb1: TComboBox
       Left = 168
       Top = 216
       Width = 193
       Height = 21
+      ItemHeight = 13
       TabOrder = 12
+      Text = 'Pilih jenis kelamin'
+      Items.Strings = (
+        'L'
+        'P')
     end
-    object Edit7: TEdit
+    object cbb2: TComboBox
       Left = 656
       Top = 24
       Width = 193
       Height = 21
+      ItemHeight = 13
       TabOrder = 13
+      Text = 'Pilih tingkat kelas'
+      Items.Strings = (
+        '10A'
+        '10B'
+        '10C'
+        '11A'
+        '11B'
+        '11C'
+        '12A'
+        '12B'
+        '12C')
     end
-    object Edit8: TEdit
+    object cbb3: TComboBox
       Left = 656
       Top = 56
       Width = 193
       Height = 21
+      ItemHeight = 13
       TabOrder = 14
+      Text = 'Pilih jurusan'
+      Items.Strings = (
+        'Multimedia'
+        'Ekonomi'
+        'Akuntansi'
+        'Perkantoran'
+        'RPL')
     end
-    object Edit9: TEdit
+    object Edit6: TEdit
       Left = 656
       Top = 88
       Width = 193
       Height = 21
       TabOrder = 15
     end
-    object Edit10: TEdit
+    object Edit7: TEdit
       Left = 656
       Top = 120
       Width = 193
       Height = 21
       TabOrder = 16
     end
-    object Edit11: TEdit
+    object Edit8: TEdit
       Left = 656
       Top = 152
       Width = 193
       Height = 21
       TabOrder = 17
     end
-    object Edit12: TEdit
+    object Edit9: TEdit
       Left = 656
       Top = 184
       Width = 193
