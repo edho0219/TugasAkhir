@@ -51,6 +51,8 @@ type
     procedure btn2Click(Sender: TObject);
     procedure posisiawal;
     procedure bersih;
+    procedure FormShow(Sender: TObject);
+    procedure btn1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -105,6 +107,31 @@ Edit6.Enabled:= False;
 Edit7.Enabled:= False;
 Edit8.Enabled:= False;
 Edit9.Enabled:= False;
+end;
+
+procedure TForm1.FormShow(Sender: TObject);
+begin
+posisiawal;
+end;
+
+procedure TForm1.btn1Click(Sender: TObject);
+begin
+bersih;
+btn1.Enabled:= False;
+btn2.Enabled:= True;
+btn3.Enabled:= False;
+btn4.Enabled:= False;
+btn5.Enabled:= True;
+btn6.Enabled:= False;
+Edit1.Enabled:= True;
+Edit2.Enabled:= True;
+Edit3.Enabled:= True;
+Edit4.Enabled:= True;
+Edit5.Enabled:= True;
+Edit6.Enabled:= True;
+Edit7.Enabled:= True;
+Edit8.Enabled:= True;
+Edit9.Enabled:= True;
 end;
 
 end.

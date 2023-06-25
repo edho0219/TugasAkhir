@@ -11,6 +11,7 @@ object Form1: TForm1
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
@@ -243,6 +244,7 @@ object Form1: TForm1
       Height = 41
       Caption = 'BARU'
       TabOrder = 5
+      OnClick = btn1Click
     end
     object btn2: TButton
       Left = 224
