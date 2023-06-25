@@ -49,6 +49,8 @@ type
     Edit8: TEdit;
     Edit9: TEdit;
     procedure btn2Click(Sender: TObject);
+    procedure posisiawal;
+    procedure bersih;
   private
     { Private declarations }
   public
@@ -62,6 +64,19 @@ implementation
 
 {$R *.dfm}
 
+procedure TForm1.bersih;
+begin
+edit1.Clear;
+edit2.Clear;
+edit3.Clear;
+edit4.Clear;
+edit5.Clear;
+edit6.Clear;
+edit7.Clear;
+edit8.Clear;
+edit9.Clear;
+end;
+
 procedure TForm1.btn2Click(Sender: TObject);
 begin
 zqry1.SQL.Clear;
@@ -70,6 +85,26 @@ zqry1.ExecSQL ;
 zqry1.SQL.Clear;
 zqry1.SQL.Add('select * from tabel_siswa');
 zqry1.Open;
+end;
+
+procedure TForm1.posisiawal;
+begin
+bersih;
+btn1.Enabled:= True;
+btn2.Enabled:= False;
+btn3.Enabled:= False;
+btn4.Enabled:= False;
+btn5.Enabled:= False;
+btn6.Enabled:= False;
+Edit1.Enabled:= False;
+Edit2.Enabled:= False;
+Edit3.Enabled:= False;
+Edit4.Enabled:= False;
+Edit5.Enabled:= False;
+Edit6.Enabled:= False;
+Edit7.Enabled:= False;
+Edit8.Enabled:= False;
+Edit9.Enabled:= False;
 end;
 
 end.
