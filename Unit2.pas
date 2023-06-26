@@ -38,6 +38,7 @@ type
     procedure posisiawal;
     procedure bersih;
     procedure btn2Click(Sender: TObject);
+    procedure btn1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -89,6 +90,22 @@ zqry1.SQL.Add('select * from tabel_walikelas');
 zqry1.Open;
 ShowMessage('Data Berhasil Disimpan');
 posisiawal;
+end;
+
+procedure TForm2.btn1Click(Sender: TObject);
+begin
+bersih;
+btn1.Enabled:= False;
+btn2.Enabled:= True;
+btn3.Enabled:= False;
+btn4.Enabled:= False;
+btn5.Enabled:= True;
+btn6.Enabled:= False;
+Edit1.Enabled:= True;
+Edit2.Enabled:= True;
+Edit3.Enabled:= True;
+Edit4.Enabled:= True;
+Edit5.Enabled:= True;
 end;
 
 end.

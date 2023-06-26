@@ -27,6 +27,8 @@ type
     ds1: TDataSource;
     con1: TZConnection;
     zqry1: TZQuery;
+    procedure bersih;
+    procedure posisiawal;
   private
     { Private declarations }
   public
@@ -39,5 +41,26 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TForm3.posisiawal;
+begin
+bersih;
+btn1.Enabled:= True;
+btn2.Enabled:= False;
+btn3.Enabled:= False;
+btn4.Enabled:= False;
+btn5.Enabled:= False;
+btn6.Enabled:= False;
+Edit1.Enabled:= False;
+Edit2.Enabled:= False;
+Edit3.Enabled:= False;
+end;
+
+procedure TForm3.bersih;
+begin
+edit1.Clear;
+edit2.Clear;
+edit3.Clear;
+end;
 
 end.
