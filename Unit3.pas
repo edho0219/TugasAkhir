@@ -29,6 +29,8 @@ type
     zqry1: TZQuery;
     procedure bersih;
     procedure posisiawal;
+    procedure btn2Click(Sender: TObject);
+    procedure btn1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -61,6 +63,32 @@ begin
 edit1.Clear;
 edit2.Clear;
 edit3.Clear;
+end;
+
+procedure TForm3.btn2Click(Sender: TObject);
+begin
+zqry1.SQL.Clear;
+zqry1.SQL.Add('insert into tabel_poin values(null,"'+edit1.Text+'","'+edit2.Text+'","'+edit3.Text+'")');
+zqry1.ExecSQL ;
+zqry1.SQL.Clear;
+zqry1.SQL.Add('select * from tabel_poin');
+zqry1.Open;
+ShowMessage('Data Berhasil Disimpan');
+posisiawal;
+end;
+
+procedure TForm3.btn1Click(Sender: TObject);
+begin
+bersih;
+btn1.Enabled:= False;
+btn2.Enabled:= True;
+btn3.Enabled:= False;
+btn4.Enabled:= False;
+btn5.Enabled:= True;
+btn6.Enabled:= False;
+Edit1.Enabled:= True;
+Edit2.Enabled:= True;
+Edit3.Enabled:= True;
 end;
 
 end.
