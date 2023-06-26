@@ -1,6 +1,6 @@
 object Form2: TForm2
-  Left = 185
-  Top = 159
+  Left = 193
+  Top = 175
   Width = 1076
   Height = 562
   Caption = 'Form2'
@@ -137,34 +137,13 @@ object Form2: TForm2
       Height = 21
       TabOrder = 1
     end
-    object Edit3: TEdit
-      Left = 168
-      Top = 88
-      Width = 193
-      Height = 21
-      TabOrder = 2
-    end
-    object Edit4: TEdit
-      Left = 168
-      Top = 120
-      Width = 193
-      Height = 21
-      TabOrder = 3
-    end
-    object Edit5: TEdit
-      Left = 656
-      Top = 24
-      Width = 193
-      Height = 21
-      TabOrder = 4
-    end
     object btn1: TButton
       Left = 96
       Top = 176
       Width = 75
       Height = 41
       Caption = 'BARU'
-      TabOrder = 5
+      TabOrder = 2
     end
     object btn2: TButton
       Left = 224
@@ -172,7 +151,8 @@ object Form2: TForm2
       Width = 75
       Height = 41
       Caption = 'SIMPAN'
-      TabOrder = 6
+      TabOrder = 3
+      OnClick = btn2Click
     end
     object btn3: TButton
       Left = 352
@@ -180,7 +160,7 @@ object Form2: TForm2
       Width = 75
       Height = 41
       Caption = 'UBAH'
-      TabOrder = 7
+      TabOrder = 4
     end
     object btn4: TButton
       Left = 480
@@ -188,7 +168,7 @@ object Form2: TForm2
       Width = 75
       Height = 41
       Caption = 'HAPUS'
-      TabOrder = 8
+      TabOrder = 5
     end
     object btn5: TButton
       Left = 608
@@ -196,7 +176,7 @@ object Form2: TForm2
       Width = 75
       Height = 41
       Caption = 'BATAL'
-      TabOrder = 9
+      TabOrder = 6
     end
     object btn6: TButton
       Left = 728
@@ -204,23 +184,59 @@ object Form2: TForm2
       Width = 75
       Height = 41
       Caption = 'LAPORAN'
+      TabOrder = 7
+    end
+    object cbb1: TComboBox
+      Left = 168
+      Top = 88
+      Width = 193
+      Height = 21
+      ItemHeight = 13
+      TabOrder = 8
+      Text = 'Pilih Jenis kelamin'
+      Items.Strings = (
+        'L'
+        'P')
+    end
+    object Edit3: TEdit
+      Left = 168
+      Top = 120
+      Width = 193
+      Height = 21
+      TabOrder = 9
+    end
+    object Edit4: TEdit
+      Left = 656
+      Top = 24
+      Width = 193
+      Height = 21
       TabOrder = 10
     end
-    object Edit6: TEdit
+    object cbb2: TComboBox
       Left = 656
       Top = 56
       Width = 193
       Height = 21
+      ItemHeight = 13
       TabOrder = 11
-      Text = 'Edit6'
+      Text = 'Pilih tingkat kelas'
+      Items.Strings = (
+        '10A'
+        '10B'
+        '10C'
+        '11A'
+        '11B'
+        '11C'
+        '12A'
+        '12B'
+        '12C')
     end
-    object Edit7: TEdit
+    object Edit5: TEdit
       Left = 656
       Top = 88
       Width = 193
       Height = 21
       TabOrder = 12
-      Text = 'Edit7'
     end
   end
   object dbgrd1: TDBGrid

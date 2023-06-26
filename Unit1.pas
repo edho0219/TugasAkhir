@@ -87,6 +87,8 @@ zqry1.ExecSQL ;
 zqry1.SQL.Clear;
 zqry1.SQL.Add('select * from tabel_siswa');
 zqry1.Open;
+ShowMessage('Data Berhasil Disimpan');
+posisiawal;
 end;
 
 procedure TForm1.posisiawal;
