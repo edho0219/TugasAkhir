@@ -152,21 +152,21 @@ object Form4: TForm4
     end
     object Edit3: TEdit
       Left = 168
-      Top = 88
+      Top = 120
       Width = 193
       Height = 21
       TabOrder = 2
     end
     object Edit4: TEdit
-      Left = 168
-      Top = 120
+      Left = 656
+      Top = 24
       Width = 193
       Height = 21
       TabOrder = 3
     end
     object Edit5: TEdit
       Left = 656
-      Top = 24
+      Top = 56
       Width = 193
       Height = 21
       TabOrder = 4
@@ -178,6 +178,7 @@ object Form4: TForm4
       Height = 41
       Caption = 'BARU'
       TabOrder = 5
+      OnClick = btn1Click
     end
     object btn2: TButton
       Left = 224
@@ -186,6 +187,7 @@ object Form4: TForm4
       Height = 41
       Caption = 'SIMPAN'
       TabOrder = 6
+      OnClick = btn2Click
     end
     object btn3: TButton
       Left = 352
@@ -221,24 +223,29 @@ object Form4: TForm4
     end
     object Edit6: TEdit
       Left = 656
-      Top = 56
+      Top = 88
       Width = 193
       Height = 21
       TabOrder = 11
     end
     object Edit7: TEdit
       Left = 656
-      Top = 88
+      Top = 120
       Width = 193
       Height = 21
       TabOrder = 12
     end
-    object Edit8: TEdit
-      Left = 656
-      Top = 120
+    object cbb1: TComboBox
+      Left = 168
+      Top = 88
       Width = 193
       Height = 21
+      ItemHeight = 13
       TabOrder = 13
+      Text = 'Pilih jenis kelamin'
+      Items.Strings = (
+        'L'
+        'P')
     end
   end
   object dbgrd1: TDBGrid
