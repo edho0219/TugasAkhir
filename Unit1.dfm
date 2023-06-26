@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 230
-  Top = 121
+  Left = 236
+  Top = 156
   Width = 1086
   Height = 587
   Caption = 'Form1'
@@ -262,6 +262,7 @@ object Form1: TForm1
       Height = 41
       Caption = 'UBAH'
       TabOrder = 7
+      OnClick = btn3Click
     end
     object btn4: TButton
       Left = 488
@@ -270,6 +271,7 @@ object Form1: TForm1
       Height = 41
       Caption = 'HAPUS'
       TabOrder = 8
+      OnClick = btn4Click
     end
     object btn5: TButton
       Left = 616
@@ -383,6 +385,7 @@ object Form1: TForm1
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object zqry1: TZQuery
     Connection = con1
@@ -410,7 +413,6 @@ object Form1: TForm1
     Database = 'laporansiswa'
     User = 'root'
     Protocol = 'mysql'
-    LibraryLocation = 'C:\Users\USER\Documents\Visual2\TugasAkhir\libmysql.dll'
     Left = 976
     Top = 112
   end
