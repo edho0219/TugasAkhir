@@ -43,6 +43,8 @@ type
     procedure btn2Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure btn3Click(Sender: TObject);
+    procedure btn4Click(Sender: TObject);
+    procedure dbgrd1CellClick(Column: TColumn);
   private
     { Private declarations }
   public
@@ -171,6 +173,52 @@ zqry1.Open;
 ShowMessage('Data Berhasil Disimpan');
 posisiawal;
 end;
+end;
+
+procedure TForm4.btn4Click(Sender: TObject);
+begin
+if MessageDlg('APAKAH YAKIN MENGHAPUS DATA INI?',mtWarning,[mbYes,mbNo],0)= mryes then
+begin
+zqry1.SQL.Clear;
+zqry1.SQL.Add('delete from tabel_ortuatauwali where id_ortuatauwali ="'+id+'"');
+zqry1. ExecSQL;
+zqry1.SQL.Clear;
+zqry1.SQL.Add('select * from tabel_ortuatauwali');
+zqry1.Open;
+ShowMessage('DATA BERHASIL DIHAPUS');
+posisiawal;
+end else
+begin
+ShowMessage('DATA BATAL DIHAPUS');
+posisiawal;
+end;
+end;
+
+procedure TForm4.dbgrd1CellClick(Column: TColumn);
+begin
+id:= zqry1.Fields[0].AsString;
+edit1.Text:= zqry1.Fields[1].AsString;
+edit2.Text:= zqry1.Fields[2].AsString;
+cbb1.Text:= zqry1.Fields[3].AsString;
+edit3.Text:= zqry1.Fields[4].AsString;
+edit4.Text:= zqry1.Fields[5].AsString;
+edit5.Text:= zqry1.Fields[6].AsString;
+edit6.Text:= zqry1.Fields[7].AsString;
+edit7.Text:= zqry1.Fields[8].AsString;
+edit1.Enabled:= True;
+edit2.Enabled:= True;
+edit3.Enabled:= True;
+edit4.Enabled:= True;
+edit5.Enabled:= True;
+edit6.Enabled:= True;
+edit7.Enabled:= True;
+cbb1.Enabled:= True;
+btn1.Enabled:= False;
+btn2.Enabled:= False;
+btn3.Enabled:= True;
+btn4.Enabled:= True;
+btn5.Enabled:= True;
+btn6.Enabled:= False;
 end;
 
 end.

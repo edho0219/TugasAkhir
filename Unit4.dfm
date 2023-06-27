@@ -206,6 +206,7 @@ object Form4: TForm4
       Height = 41
       Caption = 'HAPUS'
       TabOrder = 8
+      OnClick = btn4Click
     end
     object btn5: TButton
       Left = 608
@@ -262,6 +263,7 @@ object Form4: TForm4
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
