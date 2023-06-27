@@ -41,6 +41,8 @@ type
     procedure posisiawal;
     procedure btn1Click(Sender: TObject);
     procedure btn2Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure btn3Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -48,6 +50,7 @@ type
   end;
 
 var
+  id:string;
   Form4: TForm4;
 
 implementation
@@ -73,7 +76,7 @@ btn2.Enabled:= False;
 btn3.Enabled:= False;
 btn4.Enabled:= False;
 btn5.Enabled:= False;
-btn6.Enabled:= False;
+btn6.Enabled:= True;
 Edit1.Enabled:= False;
 Edit2.Enabled:= False;
 Edit3.Enabled:= False;
@@ -103,6 +106,39 @@ end;
 
 procedure TForm4.btn2Click(Sender: TObject);
 begin
+if edit1.Text ='' then
+begin
+ShowMessage('NIK TIDAK BOLEH KOSONG!');
+end else
+if edit2.Text ='' then
+begin
+ShowMessage('NAMA TIDAK BOLEH KOSONG!');
+end else
+if cbb1.Text ='Pilih jenis kelamin' then
+begin
+ShowMessage('SILAHKAN PILIH JENIS KELAMIN');
+end else
+if edit3.Text ='' then
+begin
+ShowMessage('PENDIDIKAN TIDAK BOLEH KOSONG!');
+end else
+if edit4.Text ='' then
+begin
+ShowMessage('NOMOR TELPON TIDAK BOLEH KOSONG!');
+end else
+if edit5.Text ='' then
+begin
+ShowMessage('ALAMAT TIDAK BOLEH KOSONG!');
+end else
+if edit6.Text ='' then
+begin
+ShowMessage('PEKERJAAN TIDAK BOLEH KOSONG!');
+end else
+if edit7.Text ='' then
+begin
+ShowMessage('STATUS TIDAK BOLEH KOSONG!');
+end else
+begin
 zqry1.SQL.Clear;
 zqry1.SQL.Add('insert into tabel_ortuatauwali values(null,"'+edit1.Text+'","'+edit2.Text+'","'+cbb1.Text+'","'+edit3.Text+'","'+edit4.Text+'","'+edit5.Text+'","'+edit6.Text+'","'+edit7.Text+'")');
 zqry1.ExecSQL ;
@@ -111,6 +147,30 @@ zqry1.SQL.Add('select * from tabel_ortuatauwali');
 zqry1.Open;
 ShowMessage('Data Berhasil Disimpan');
 posisiawal;
+end;
+end;
+
+procedure TForm4.FormShow(Sender: TObject);
+begin
+posisiawal;
+end;
+
+procedure TForm4.btn3Click(Sender: TObject);
+begin
+if (edit1.Text= '')or(edit2.Text= '')or(edit3.Text= '')or(edit4.Text= '')or(edit5.Text= '')or(edit6.Text= '')or(edit7.Text= '')then
+begin
+  ShowMessage('Inputan Wajib Di Isi');
+end else
+begin
+zqry1.SQL.Clear;
+zqry1.SQL.Add(' update tabel_ortuatauwali set nik="'+edit1.Text+'",nama="'+edit2.Text+'",jenis_kelamin="'+cbb1.Text+'",pendidikan="'+edit3.Text+'",no_telpon="'+edit4.Text+'",alamat="'+edit5.Text+'",pekerjaan="'+edit6.Text+'",status="'+edit7.Text+'" where id_ortuatauwali ="'+id+'"');
+zqry1.ExecSQL ;
+zqry1.SQL.Clear;
+zqry1.SQL.Add('select * from tabel_ortuatauwali');
+zqry1.Open;
+ShowMessage('Data Berhasil Disimpan');
+posisiawal;
+end;
 end;
 
 end.
