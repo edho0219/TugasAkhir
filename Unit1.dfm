@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 236
-  Top = 156
+  Left = 186
+  Top = 125
   Width = 1086
   Height = 587
   Caption = 'Form1'
@@ -280,6 +280,7 @@ object Form1: TForm1
       Height = 41
       Caption = 'BATAL'
       TabOrder = 9
+      OnClick = btn5Click
     end
     object btn6: TButton
       Left = 736
@@ -413,6 +414,7 @@ object Form1: TForm1
     Database = 'laporansiswa'
     User = 'root'
     Protocol = 'mysql'
+    LibraryLocation = 'C:\Users\USER\Documents\Visual2\TugasAkhir\libmysql.dll'
     Left = 976
     Top = 112
   end

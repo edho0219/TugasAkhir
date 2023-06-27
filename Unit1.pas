@@ -56,6 +56,7 @@ type
     procedure btn3Click(Sender: TObject);
     procedure dbgrd1CellClick(Column: TColumn);
     procedure btn4Click(Sender: TObject);
+    procedure btn5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -85,6 +86,55 @@ end;
 
 procedure TForm1.btn2Click(Sender: TObject);
 begin
+if edit1.Text ='' then
+begin
+ShowMessage('NIS TIDAK BOLEH KOSONG!');
+end else
+if edit2.Text ='' then
+begin
+ShowMessage('NISN TIDAK BOLEH KOSONG!');
+end else
+if edit3.Text ='' then
+begin
+ShowMessage('NIK TIDAK BOLEH KOSONG!');
+end else
+if edit4.Text ='' then
+begin
+ShowMessage('NAMA TIDAK BOLEH KOSONG!');
+end else
+if edit5.Text ='' then
+begin
+ShowMessage('TEMPAT LAHIR TIDAK BOLEH KOSONG!');
+end else
+if cbb1.Text ='Pilih jenis kelamin' then
+begin
+ShowMessage('TOLONG ISI JENIS KELAMIN');
+end else
+if cbb2.Text ='Pilih tingkat kelas' then
+begin
+ShowMessage('TOLONG ISI TINGKAT KELAS');
+end else
+if cbb3.Text ='Pilih jurusan' then
+begin
+ShowMessage('TOLONG ISI JURUSAN');
+end else
+if edit6.Text ='' then
+begin
+ShowMessage('ID WALI KELAS TIDAK BOLEH KOSONG!');
+end else
+if edit7.Text ='' then
+begin
+ShowMessage('ALAMAT TIDAK BOLEH KOSONG!');
+end else
+if edit8.Text ='' then
+begin
+ShowMessage('NO TELPON TIDAK BOLEH KOSONG!');
+end else
+if edit9.Text ='' then
+begin
+ShowMessage('STATUS TIDAK BOLEH KOSONG!');
+end else
+begin
 zqry1.SQL.Clear;
 zqry1.SQL.Add('insert into tabel_siswa values(null,"'+edit1.Text+'","'+edit2.Text+'","'+edit3.Text+'","'+edit4.Text+'","'+edit5.Text+'","'+formatdatetime('yyyy-mm-dd',dtp1.Date)+'","'+cbb1.Text+'","'+cbb2.Text+'","'+cbb3.Text+'","'+edit6.Text+'","'+edit7.Text+'","'+edit8.Text+'","'+edit9.Text+'")');
 zqry1.ExecSQL ;
@@ -93,6 +143,7 @@ zqry1.SQL.Add('select * from tabel_siswa');
 zqry1.Open;
 ShowMessage('Data Berhasil Disimpan');
 posisiawal;
+end;
 end;
 
 procedure TForm1.posisiawal;
@@ -142,6 +193,11 @@ end;
 
 procedure TForm1.btn3Click(Sender: TObject);
 begin
+if (edit1.Text= '')or(edit2.Text= '')or(edit3.Text= '')or(edit4.Text= '')or(edit5.Text= '')or(edit6.Text= '')or(edit7.Text= '')or(edit8.Text= '')or(edit9.Text= '')then
+begin
+  ShowMessage('Inputan Wajib Di Isi');
+end else
+begin
 zqry1.SQL.Clear;
 zqry1.SQL.Add('update tabel_siswa set nis="'+edit1.Text+'",nisn="'+edit2.Text+'",nik="'+edit3.Text+'",nama="'+edit4.Text+'",tempat_lahir="'+edit5.Text+'",jenis_kelamin="'+cbb1.Text+'",tingkat_kelas="'+cbb2.Text+'",jurusan="'+cbb3.Text+'",id_walikelas="'+edit6.Text+'",alamat="'+edit7.Text+'",no_telp="'+edit8.Text+'",status="'+edit9.Text+'" where id_siswa ="'+id+'"');
 zqry1.ExecSQL ;
@@ -150,6 +206,7 @@ zqry1.SQL.Add('select * from tabel_siswa');
 zqry1.Open;
 ShowMessage('Data Berhasil Disimpan');
 posisiawal;
+end;
 end;
 
 procedure TForm1.dbgrd1CellClick(Column: TColumn);
@@ -204,6 +261,20 @@ begin
 ShowMessage('DATA BATAL DIHAPUS');
 posisiawal;
 end;
+end;
+
+procedure TForm1.btn5Click(Sender: TObject);
+begin
+Edit1.Clear;
+Edit2.Clear;
+Edit3.Clear;
+Edit4.Clear;
+Edit5.Clear;
+Edit6.Clear;
+Edit7.Clear;
+Edit8.Clear;
+Edit9.Clear;
+posisiawal;
 end;
 
 end.
