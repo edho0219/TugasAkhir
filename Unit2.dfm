@@ -1,6 +1,6 @@
 object Form2: TForm2
-  Left = 193
-  Top = 175
+  Left = 224
+  Top = 114
   Width = 1076
   Height = 562
   Caption = 'Form2'
@@ -11,6 +11,7 @@ object Form2: TForm2
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
@@ -162,6 +163,7 @@ object Form2: TForm2
       Height = 41
       Caption = 'UBAH'
       TabOrder = 4
+      OnClick = btn3Click
     end
     object btn4: TButton
       Left = 480
@@ -170,6 +172,7 @@ object Form2: TForm2
       Height = 41
       Caption = 'HAPUS'
       TabOrder = 5
+      OnClick = btn4Click
     end
     object btn5: TButton
       Left = 608
@@ -178,6 +181,7 @@ object Form2: TForm2
       Height = 41
       Caption = 'BATAL'
       TabOrder = 6
+      OnClick = btn5Click
     end
     object btn6: TButton
       Left = 728
@@ -252,6 +256,7 @@ object Form2: TForm2
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
