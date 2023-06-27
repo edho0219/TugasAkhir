@@ -42,6 +42,11 @@ type
     procedure posisiawal;
     procedure btn1Click(Sender: TObject);
     procedure btn2Click(Sender: TObject);
+    procedure btn3Click(Sender: TObject);
+    procedure dbgrd1CellClick(Column: TColumn);
+    procedure FormShow(Sender: TObject);
+    procedure btn5Click(Sender: TObject);
+    procedure btn4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -143,6 +148,85 @@ zqry1.SQL.Clear;
 zqry1.SQL.Add('select * from tabel_catatan');
 zqry1.Open;
 ShowMessage('Data Berhasil Disimpan');
+posisiawal;
+end;
+end;
+
+procedure TForm5.btn3Click(Sender: TObject);
+begin
+if (edit1.Text= '')or(edit2.Text= '')or(edit3.Text= '')or(edit4.Text= '')or(edit5.Text= '')or(edit6.Text= '')or(edit7.Text= '')then
+begin
+  ShowMessage('Inputan Wajib Di Isi');
+end else
+begin
+zqry1.SQL.Clear;
+zqry1.SQL.Add('update tabel_catatan set semester="'+edit1.Text+'",id_siswa="'+edit2.Text+'",id_walikelas="'+edit3.Text+'",id_ortuatauwali="'+edit4.Text+'",id_point="'+edit5.Text+'",keterangan="'+edit6.Text+'",status="'+edit7.Text+'" where id_catatan ="'+id+'"');
+zqry1.ExecSQL ;
+zqry1.SQL.Clear;
+zqry1.SQL.Add('select * from tabel_catatan');
+zqry1.Open;
+ShowMessage('Data Berhasil Disimpan');
+posisiawal;
+end;
+end;
+
+procedure TForm5.dbgrd1CellClick(Column: TColumn);
+begin
+id:= zqry1.Fields[0].AsString;
+edit1.Text:= zqry1.Fields[2].AsString;
+edit2.Text:= zqry1.Fields[3].AsString;
+edit3.Text:= zqry1.Fields[4].AsString;
+edit4.Text:= zqry1.Fields[5].AsString;
+edit5.Text:= zqry1.Fields[6].AsString;
+edit6.Text:= zqry1.Fields[7].AsString;
+edit7.Text:= zqry1.Fields[8].AsString;
+edit1.Enabled:= True;
+edit2.Enabled:= True;
+edit3.Enabled:= True;
+edit4.Enabled:= True;
+edit5.Enabled:= True;
+edit6.Enabled:= True;
+edit7.Enabled:= True;
+btn1.Enabled:= False;
+btn2.Enabled:= False;
+btn3.Enabled:= True;
+btn4.Enabled:= True;
+btn5.Enabled:= True;
+btn6.Enabled:= False;
+end;
+
+procedure TForm5.FormShow(Sender: TObject);
+begin
+posisiawal;
+end;
+
+procedure TForm5.btn5Click(Sender: TObject);
+begin
+Edit1.Clear;
+Edit2.Clear;
+Edit3.Clear;
+Edit4.Clear;
+Edit5.Clear;
+Edit6.Clear;
+Edit7.Clear;
+posisiawal;
+end;
+
+procedure TForm5.btn4Click(Sender: TObject);
+begin
+if MessageDlg('APAKAH YAKIN MENGHAPUS DATA INI?',mtWarning,[mbYes,mbNo],0)= mryes then
+begin
+zqry1.SQL.Clear;
+zqry1.SQL.Add('delete from tabel_catatan where id_catatan ="'+id+'"');
+zqry1. ExecSQL;
+zqry1.SQL.Clear;
+zqry1.SQL.Add('select * from tabel_catatan');
+zqry1.Open;
+ShowMessage('DATA BERHASIL DIHAPUS');
+posisiawal;
+end else
+begin
+ShowMessage('DATA BATAL DIHAPUS');
 posisiawal;
 end;
 end;

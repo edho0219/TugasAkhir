@@ -11,6 +11,7 @@ object Form5: TForm5
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
@@ -196,6 +197,7 @@ object Form5: TForm5
       Height = 41
       Caption = 'UBAH'
       TabOrder = 7
+      OnClick = btn3Click
     end
     object btn4: TButton
       Left = 480
@@ -204,6 +206,7 @@ object Form5: TForm5
       Height = 41
       Caption = 'HAPUS'
       TabOrder = 8
+      OnClick = btn4Click
     end
     object btn5: TButton
       Left = 608
@@ -212,6 +215,7 @@ object Form5: TForm5
       Height = 41
       Caption = 'BATAL'
       TabOrder = 9
+      OnClick = btn5Click
     end
     object btn6: TButton
       Left = 728
@@ -257,6 +261,7 @@ object Form5: TForm5
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object ds1: TDataSource
     DataSet = zqry1
