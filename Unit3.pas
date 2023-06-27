@@ -52,7 +52,7 @@ btn2.Enabled:= False;
 btn3.Enabled:= False;
 btn4.Enabled:= False;
 btn5.Enabled:= False;
-btn6.Enabled:= False;
+btn6.Enabled:= True;
 Edit1.Enabled:= False;
 Edit2.Enabled:= False;
 Edit3.Enabled:= False;
@@ -67,6 +67,19 @@ end;
 
 procedure TForm3.btn2Click(Sender: TObject);
 begin
+if edit1.Text ='' then
+begin
+ShowMessage('NAMA POIN TIDAK BOLEH KOSONG!');
+end else
+if edit2.Text ='' then
+begin
+ShowMessage('TOTAL TIDAK BOLEH KOSONG!');
+end else
+if edit3.Text ='' then
+begin
+ShowMessage('KETERANGAN TIDAK BOLEH KOSONG!');
+end else
+begin
 zqry1.SQL.Clear;
 zqry1.SQL.Add('insert into tabel_poin values(null,"'+edit1.Text+'","'+edit2.Text+'","'+edit3.Text+'")');
 zqry1.ExecSQL ;
@@ -75,6 +88,7 @@ zqry1.SQL.Add('select * from tabel_poin');
 zqry1.Open;
 ShowMessage('Data Berhasil Disimpan');
 posisiawal;
+end;
 end;
 
 procedure TForm3.btn1Click(Sender: TObject);
