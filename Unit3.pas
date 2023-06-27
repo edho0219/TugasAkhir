@@ -35,6 +35,7 @@ type
     procedure dbgrd1CellClick(Column: TColumn);
     procedure FormShow(Sender: TObject);
     procedure btn4Click(Sender: TObject);
+    procedure btn5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -167,6 +168,14 @@ begin
 ShowMessage('DATA BATAL DIHAPUS');
 posisiawal;
 end;
+end;
+
+procedure TForm3.btn5Click(Sender: TObject);
+begin
+Edit1.Clear;
+Edit2.Clear;
+Edit3.Clear;
+posisiawal;
 end;
 
 end.

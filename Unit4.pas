@@ -45,6 +45,7 @@ type
     procedure btn3Click(Sender: TObject);
     procedure btn4Click(Sender: TObject);
     procedure dbgrd1CellClick(Column: TColumn);
+    procedure btn5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -219,6 +220,18 @@ btn3.Enabled:= True;
 btn4.Enabled:= True;
 btn5.Enabled:= True;
 btn6.Enabled:= False;
+end;
+
+procedure TForm4.btn5Click(Sender: TObject);
+begin
+Edit1.Clear;
+Edit2.Clear;
+Edit3.Clear;
+Edit4.Clear;
+Edit5.Clear;
+Edit6.Clear;
+Edit7.Clear;
+posisiawal;
 end;
 
 end.
