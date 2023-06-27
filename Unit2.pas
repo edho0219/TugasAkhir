@@ -157,7 +157,7 @@ begin
 end else
 begin
 zqry1.SQL.Clear;
-zqry1.SQL.Add(' update tabel_walikelas set nik="'+edit1.Text+'",nama="'+edit2.Text+'",jenis_kelamin="'+cbb1.Text+'",pendidikan="'+edit3.Text+'",mapel="'+edit4.Text+'",tingkat_kelas="'+cbb2.Text+'",jabatan="'+edit5.Text+'" where id_walikelas="'+id+'"');
+zqry1.SQL.Add(' update tabel_walikelas set nik="'+edit1.Text+'",nama="'+edit2.Text+'",jenis_kelamin="'+cbb1.Text+'",pendidikan="'+edit3.Text+'",mapel="'+edit4.Text+'",tingkat_kelas="'+cbb2.Text+'",jabatan="'+edit5.Text+'" where id_walikelas ="'+id+'"');
 zqry1.ExecSQL ;
 zqry1.SQL.Clear;
 zqry1.SQL.Add('select * from tabel_walikelas');
@@ -197,7 +197,7 @@ begin
 if MessageDlg('APAKAH YAKIN MENGHAPUS DATA INI?',mtWarning,[mbYes,mbNo],0)= mryes then
 begin
 zqry1.SQL.Clear;
-zqry1.SQL.Add('delete from tabel_walikelas where id_walikelas="'+id+'"');
+zqry1.SQL.Add('delete from tabel_walikelas where id_walikelas ="'+id+'"');
 zqry1. ExecSQL;
 zqry1.SQL.Clear;
 zqry1.SQL.Add('select * from tabel_walikelas');
