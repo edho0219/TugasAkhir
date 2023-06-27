@@ -32,6 +32,8 @@ type
     procedure btn2Click(Sender: TObject);
     procedure btn1Click(Sender: TObject);
     procedure btn3Click(Sender: TObject);
+    procedure dbgrd1CellClick(Column: TColumn);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -123,6 +125,28 @@ zqry1.Open;
 ShowMessage('Data Berhasil Disimpan');
 posisiawal;
 end;
+end;
+
+procedure TForm3.dbgrd1CellClick(Column: TColumn);
+begin
+id:= zqry1.Fields[0].AsString;
+edit1.Text:= zqry1.Fields[1].AsString;
+edit2.Text:= zqry1.Fields[2].AsString;
+edit3.Text:= zqry1.Fields[3].AsString;
+edit1.Enabled:= True;
+edit2.Enabled:= True;
+edit3.Enabled:= True;
+btn1.Enabled:= False;
+btn2.Enabled:= False;
+btn3.Enabled:= True;
+btn4.Enabled:= True;
+btn5.Enabled:= True;
+btn6.Enabled:= False;
+end;
+
+procedure TForm3.FormShow(Sender: TObject);
+begin
+posisiawal;
 end;
 
 end.
