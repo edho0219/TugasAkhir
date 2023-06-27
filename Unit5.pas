@@ -90,7 +90,7 @@ end;
 procedure TForm5.btn1Click(Sender: TObject);
 begin
 bersih;
-btn1.Enabled:= False;
+btn1.Enabled:= false;
 btn2.Enabled:= True;
 btn3.Enabled:= False;
 btn4.Enabled:= False;
