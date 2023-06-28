@@ -199,7 +199,7 @@ begin
 end else
 begin
 zqry1.SQL.Clear;
-zqry1.SQL.Add('update tabel_siswa set nis="'+edit1.Text+'",nisn="'+edit2.Text+'",nik="'+edit3.Text+'",nama="'+edit4.Text+'",tempat_lahir="'+edit5.Text+'",jenis_kelamin="'+cbb1.Text+'",tingkat_kelas="'+cbb2.Text+'",jurusan="'+cbb3.Text+'",id_walikelas="'+edit6.Text+'",alamat="'+edit7.Text+'",no_telp="'+edit8.Text+'",status="'+edit9.Text+'" where id_siswa ="'+id+'"');
+zqry1.SQL.Add('update tabel_siswa set nis="'+edit1.Text+'",nisn="'+edit2.Text+'",nik="'+edit3.Text+'",nama="'+edit4.Text+'",tempat_lahir="'+edit5.Text+'",tanggal_lahir="'+formatdatetime('yyyy-mm-dd',dtp1.Date)+'",jenis_kelamin="'+cbb1.Text+'",tingkat_kelas="'+cbb2.Text+'",jurusan="'+cbb3.Text+'",id_walikelas="'+edit6.Text+'",alamat="'+edit7.Text+'",no_telp="'+edit8.Text+'",status="'+edit9.Text+'" where id_siswa ="'+id+'"');
 zqry1.ExecSQL ;
 zqry1.SQL.Clear;
 zqry1.SQL.Add('select * from tabel_siswa');
@@ -217,6 +217,7 @@ edit2.Text:= zqry1.Fields[2].AsString;
 edit3.Text:= zqry1.Fields[3].AsString;
 edit4.Text:= zqry1.Fields[4].AsString;
 edit5.Text:= zqry1.Fields[5].AsString;
+dtp1.Date := zqry1.Fields[6].AsDateTime;
 cbb1.Text:= zqry1.Fields[7].AsString;
 cbb2.Text:= zqry1.Fields[8].AsString;
 cbb3.Text:= zqry1.Fields[9].AsString;

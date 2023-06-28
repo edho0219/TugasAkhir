@@ -160,7 +160,7 @@ begin
 end else
 begin
 zqry1.SQL.Clear;
-zqry1.SQL.Add('update tabel_catatan set semester="'+edit1.Text+'",id_siswa="'+edit2.Text+'",id_walikelas="'+edit3.Text+'",id_ortuatauwali="'+edit4.Text+'",id_point="'+edit5.Text+'",keterangan="'+edit6.Text+'",status="'+edit7.Text+'" where id_catatan ="'+id+'"');
+zqry1.SQL.Add('update tabel_catatan set tanggal="'+formatdatetime('yyyy-mm-dd',dtp1.Date)+'",semester="'+edit1.Text+'",id_siswa="'+edit2.Text+'",id_walikelas="'+edit3.Text+'",id_ortuatauwali="'+edit4.Text+'",id_point="'+edit5.Text+'",keterangan="'+edit6.Text+'",status="'+edit7.Text+'" where id_catatan ="'+id+'"');
 zqry1.ExecSQL ;
 zqry1.SQL.Clear;
 zqry1.SQL.Add('select * from tabel_catatan');
@@ -173,6 +173,7 @@ end;
 procedure TForm5.dbgrd1CellClick(Column: TColumn);
 begin
 id:= zqry1.Fields[0].AsString;
+dtp1.Date:= zqry1.Fields[1].AsDateTime;
 edit1.Text:= zqry1.Fields[2].AsString;
 edit2.Text:= zqry1.Fields[3].AsString;
 edit3.Text:= zqry1.Fields[4].AsString;
