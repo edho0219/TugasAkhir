@@ -1,8 +1,8 @@
 object Form1: TForm1
-  Left = 203
-  Top = 130
+  Left = 207
+  Top = 126
   Width = 1086
-  Height = 588
+  Height = 592
   Caption = 'Form1'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -289,6 +289,7 @@ object Form1: TForm1
       Height = 41
       Caption = 'LAPORAN'
       TabOrder = 10
+      OnClick = btn6Click
     end
     object dtp1: TDateTimePicker
       Left = 168
@@ -455,13 +456,30 @@ object Form1: TForm1
       TopMargin = 10.000000000000000000
       BottomMargin = 10.000000000000000000
       object ReportTitle1: TfrxReportTitle
-        Height = 22.677180000000000000
+        Height = 56.692950000000000000
         Top = 18.897650000000000000
         Width = 718.110700000000000000
+        object Memo31: TfrxMemoView
+          Left = 245.669450000000000000
+          Top = 15.118120000000000000
+          Width = 226.771800000000000000
+          Height = 22.677180000000000000
+          ShowHint = False
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -19
+          Font.Name = 'Times New Roman'
+          Font.Style = [fsBold]
+          HAlign = haCenter
+          Memo.UTF8 = (
+            'LAPORAN DATA SISWA')
+          ParentFont = False
+          VAlign = vaCenter
+        end
       end
       object MasterData1: TfrxMasterData
         Height = 34.015770000000000000
-        Top = 166.299320000000000000
+        Top = 200.315090000000000000
         Width = 718.110700000000000000
         DataSet = frxdbdtst1
         DataSetName = 'frxDBDataset1'
@@ -749,7 +767,7 @@ object Form1: TForm1
       end
       object PageHeader1: TfrxPageHeader
         Height = 41.574830000000000000
-        Top = 64.252010000000000000
+        Top = 98.267780000000000000
         Width = 718.110700000000000000
         object Memo1: TfrxMemoView
           Left = 3.779530000000000000
@@ -1006,12 +1024,12 @@ object Form1: TForm1
       end
       object PageFooter1: TfrxPageFooter
         Height = 60.472480000000000000
-        Top = 404.409710000000000000
+        Top = 438.425480000000000000
         Width = 718.110700000000000000
       end
       object Footer1: TfrxFooter
         Height = 120.944960000000000000
-        Top = 222.992270000000000000
+        Top = 257.008040000000000000
         Width = 718.110700000000000000
         object Memo29: TfrxMemoView
           Left = 585.827150000000000000
