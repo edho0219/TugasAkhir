@@ -6,7 +6,7 @@ uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, ComCtrls, Grids, DBGrids, StdCtrls, ExtCtrls, DB,
   ZAbstractRODataset, ZAbstractDataset, ZDataset, ZAbstractConnection,
-  ZConnection;
+  ZConnection, frxClass, frxDBSet;
 
 type
   TForm5 = class(TForm)
@@ -38,6 +38,8 @@ type
     ds1: TDataSource;
     con1: TZConnection;
     zqry1: TZQuery;
+    frxdbdtst1: TfrxDBDataset;
+    frxrprt1: TfrxReport;
     procedure bersih;
     procedure posisiawal;
     procedure btn1Click(Sender: TObject);
@@ -47,6 +49,7 @@ type
     procedure FormShow(Sender: TObject);
     procedure btn5Click(Sender: TObject);
     procedure btn4Click(Sender: TObject);
+    procedure btn6Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -230,6 +233,11 @@ begin
 ShowMessage('DATA BATAL DIHAPUS');
 posisiawal;
 end;
+end;
+
+procedure TForm5.btn6Click(Sender: TObject);
+begin
+frxrprt1.ShowReport();
 end;
 
 end.
