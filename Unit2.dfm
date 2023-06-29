@@ -1,6 +1,6 @@
 object Form2: TForm2
-  Left = 250
-  Top = 200
+  Left = 191
+  Top = 122
   Width = 1076
   Height = 562
   Caption = 'Form2'
@@ -190,6 +190,7 @@ object Form2: TForm2
       Height = 41
       Caption = 'LAPORAN'
       TabOrder = 7
+      OnClick = btn6Click
     end
     object cbb1: TComboBox
       Left = 168
